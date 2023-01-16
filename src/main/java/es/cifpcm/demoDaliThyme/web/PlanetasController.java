@@ -14,9 +14,13 @@ import java.util.List;
 public class PlanetasController {
     @GetMapping("/")
     public String index(Model model){
+        File file = new File(
+                getClass().getClassLoader().getResource("/static/imagenes").getFile()
+        );
         List<String> Planetas = new ArrayList<String>();
-        Planetas.add("jeje");
-        Planetas.add("jejde");
+        for(File planeta: file.listFiles()) {
+            Planetas.add(planeta.getName());
+            }
         model.addAttribute("Planetas", Planetas);
         return "index";
     }

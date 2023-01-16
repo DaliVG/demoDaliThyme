@@ -6,12 +6,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>consigue tu saludo <a href="greeting">jeje</a></p>
-<form action="greeting">
-    <input type="text" name="nombre">APELLIODO</input>
-
+<p>consigue tu saludo <a href="planetaso">jeje</a></p>
+<form action="mostrado">
+    <input type="text" name="nombre">PLANETA</input>
     <input type="submit" >
-    <select name="">
+    <select name="planeta">
         <option th:each="planeta : ${Planetas}" th:value="${planeta}" th:text="${planeta}"> </option>
     </select>
 </form>
